@@ -4,14 +4,20 @@
 
 // general styles
 * {
+  border: 0;
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.6;
   background: #fff;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 a {
@@ -44,15 +50,22 @@ img {
 // main nav
 #main-nav {
   display: flex;
-  justify-content: space-between;
+  text-align: center;
+  justify-content: space-evenly;
   padding-top: 1rem;
+  width: 100%;
+  padding: 0 1.5rem;
 
   ul {
     display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   li {
     padding: 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: center;
   }
 
   a {
@@ -68,7 +81,7 @@ img {
     }
 
     &.current {
-      border-color: $main-color;
+      border-color: #fff;
     }
   }
 }
@@ -153,6 +166,7 @@ img {
 
   // home section C
   &-c {
+    background-color: rgb(221, 221, 221);
     .process {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -359,6 +373,23 @@ img {
   }
 }
 
+#thanks {
+  .jumbo {
+    background: $light-color;
+  }
+  h1 {
+    padding-left: 2rem;
+    padding-top: 2rem;
+    font-size: 4rem;
+  }
+  p {
+    padding-left: 2rem;
+    margin-bottom: 15rem;
+    font-size: 1.5rem;
+    padding-bottom: 3rem;
+  }
+}
+
 // footer
 #main-footer {
   background: $dark-color;
@@ -371,21 +402,24 @@ img {
     height: 5rem;
     align-items: center;
 
-    .social .fab {
-      margin-right: 1rem;
-      border: 2px #fff solid;
-      border-radius: 50%;
+    a {
+      text-decoration: none;
+      color: #fff;
+    }
+    .fab {
       height: 20px;
       width: 20px;
       line-height: 20px;
       text-align: center;
-      padding: 0.5rem;
-      transition: all 0.5s;
-
+      padding: 0.5rem 0.75rem;
+      margin-right: 1.5rem;
       &:hover {
-        background: $main-color;
+        transition: all 0.5s;
+        color: $main-color;
+        transform: scale(1.1);
       }
     }
+    // }
   }
 }
 

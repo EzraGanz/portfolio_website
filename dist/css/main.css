@@ -13,7 +13,7 @@
 
 .btn-main {
   color: #333;
-  background-color: #ffbc00; }
+  background-color: #0058ca; }
 
 .btn-light {
   color: #333;
@@ -26,10 +26,10 @@
 button[class^="btn-"]:hover,
 a[class^="btn-"]:hover,
 input[class^="btn-"]:hover {
-  background-color: #ffbc00; }
+  background-color: #0058ca; }
 
 .bg-main {
-  background: #ffbc00;
+  background: #0058ca;
   color: #fff; }
 
 .bg-dark {
@@ -86,7 +86,7 @@ input[class^="btn-"]:hover {
 .bottom-line {
   height: 2px;
   width: 3rem;
-  background: #ffbc00;
+  background: #0058ca;
   display: block;
   margin: 0 auto 1rem auto; }
 
@@ -97,7 +97,7 @@ input[class^="btn-"]:hover {
 
 .item {
   position: relative;
-  background: #ffbc00;
+  background: #0058ca;
   overflow: hidden; }
   .item:after {
     content: "";
@@ -164,13 +164,18 @@ input[class^="btn-"]:hover {
     margin: 0; }
 
 * {
+  border: 0;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  box-sizing: border-box; }
 
 body {
   font-family: "Dosis", sans-serif;
   line-height: 1.6;
   background: #fff; }
+
+html {
+  scroll-behavior: smooth; }
 
 a {
   text-decoration: none;
@@ -195,12 +200,19 @@ img {
 
 #main-nav {
   display: flex;
-  justify-content: space-between;
-  padding-top: 1rem; }
+  text-align: center;
+  justify-content: space-evenly;
+  padding-top: 1rem;
+  width: 100%;
+  padding: 0 1.5rem; }
   #main-nav ul {
-    display: flex; }
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
   #main-nav li {
-    padding: 1rem 1.5rem; }
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+    align-items: center; }
   #main-nav a {
     text-decoration: none;
     color: #fff;
@@ -211,7 +223,7 @@ img {
     #main-nav a:hover {
       border-color: #ccc; }
     #main-nav a.current {
-      border-color: #ffbc00; }
+      border-color: #fff; }
 
 #header-home {
   background: url("../img/showcase.jpg") no-repeat center right/cover;
@@ -227,7 +239,7 @@ img {
 #header-inner {
   background: url("../img/showcase.jpg") no-repeat 20% 30%/cover;
   height: 5.5rem;
-  border-bottom: 3px solid #ffbc00; }
+  border-bottom: 3px solid #0058ca; }
 
 #home-a .specials {
   margin-top: 3rem;
@@ -235,7 +247,7 @@ img {
   grid-gap: 1rem;
   grid-template-columns: repeat(4, 1fr); }
   #home-a .specials .fas {
-    color: #ffbc00;
+    color: #0058ca;
     padding-bottom: 0.4rem; }
 
 #home-b .stats {
@@ -255,43 +267,45 @@ img {
     #home-b .stats div:nth-child(even) {
       background: #ccc; }
 
-#home-c .process {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 1.5rem;
-  text-align: center; }
-  #home-c .process-step {
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: 28px;
-    background-color: #ffbc00;
-    color: #fff;
-    border-radius: 50%;
-    height: 15px;
-    width: 15px;
-    line-height: 15px;
-    padding: 1rem;
-    transition: all 1s; }
-  #home-c .process-icon {
-    border-radius: 50%;
-    background: #333;
-    color: #fff;
-    padding: 2rem;
-    width: 70px;
-    height: 70px;
-    line-height: 70px;
-    text-align: center;
-    position: relative;
-    transition: all 1s; }
-    #home-c .process-icon:hover {
-      background: #ffbc00;
-      width: 90px;
-      height: 90px;
-      line-height: 90px; }
-      #home-c .process-icon:hover .process-step {
-        background: #333;
-        color: #fff; }
+#home-c {
+  background-color: #dddddd; }
+  #home-c .process {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 1.5rem;
+    text-align: center; }
+    #home-c .process-step {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 28px;
+      background-color: #0058ca;
+      color: #fff;
+      border-radius: 50%;
+      height: 15px;
+      width: 15px;
+      line-height: 15px;
+      padding: 1rem;
+      transition: all 1s; }
+    #home-c .process-icon {
+      border-radius: 50%;
+      background: #333;
+      color: #fff;
+      padding: 2rem;
+      width: 70px;
+      height: 70px;
+      line-height: 70px;
+      text-align: center;
+      position: relative;
+      transition: all 1s; }
+      #home-c .process-icon:hover {
+        background: #0058ca;
+        width: 90px;
+        height: 90px;
+        line-height: 90px; }
+        #home-c .process-icon:hover .process-step {
+          background: #333;
+          color: #fff; }
 
 #about-a .about-info {
   display: grid;
@@ -303,7 +317,7 @@ img {
 
 #about-a .bio {
   grid-area: bio;
-  border-left: 3px solid #ffbc00;
+  border-left: 3px solid #0058ca;
   padding: 00.8rem; }
 
 #about-a .award-1 {
@@ -318,7 +332,7 @@ img {
 #about-a .award-1 .fas,
 #about-a .award-2 .fas,
 #about-a .award-3 .fas {
-  color: #ffbc00;
+  color: #0058ca;
   margin: 1rem; }
 
 #about-b .progress {
@@ -331,7 +345,7 @@ img {
     height: 100%;
     color: #fff;
     text-align: center;
-    background: #ffbc00; }
+    background: #0058ca; }
 
 #about-c .about-logos {
   display: grid;
@@ -390,6 +404,20 @@ img {
   text-align: center;
   font-size: 4rem; }
 
+#thanks .jumbo {
+  background: #f4f4f4; }
+
+#thanks h1 {
+  padding-left: 2rem;
+  padding-top: 2rem;
+  font-size: 4rem; }
+
+#thanks p {
+  padding-left: 2rem;
+  margin-bottom: 15rem;
+  font-size: 1.5rem;
+  padding-bottom: 3rem; }
+
 #main-footer {
   background: #333;
   color: #fff;
@@ -399,18 +427,20 @@ img {
     justify-content: space-between;
     height: 5rem;
     align-items: center; }
-    #main-footer .footer-content .social .fab {
-      margin-right: 1rem;
-      border: 2px #fff solid;
-      border-radius: 50%;
+    #main-footer .footer-content a {
+      text-decoration: none;
+      color: #fff; }
+    #main-footer .footer-content .fab {
       height: 20px;
       width: 20px;
       line-height: 20px;
       text-align: center;
-      padding: 0.5rem;
-      transition: all 0.5s; }
-      #main-footer .footer-content .social .fab:hover {
-        background: #ffbc00; }
+      padding: 0.5rem 0.75rem;
+      margin-right: 1.5rem; }
+      #main-footer .footer-content .fab:hover {
+        transition: all 0.5s;
+        color: #0058ca;
+        transform: scale(1.1); }
 
 @media (max-width: 800px) {
   #header-home {
@@ -426,7 +456,7 @@ img {
       padding: 1rem; }
   #header-home {
     height: 10rem;
-    border-bottom: 3px solid #ffbc00;
+    border-bottom: 3px solid #0058ca;
     background-position: 20% 30%; }
     #header-home .header-content {
       display: none; }
